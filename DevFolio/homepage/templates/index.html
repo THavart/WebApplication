@@ -1,0 +1,651 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Taylor Havart - DevFolio</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <!--===============================================================================================-->
+  <link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous">
+  <!--===============================================================================================-->
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png'%}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css'%}" rel="stylesheet">
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+  <link href="{% static 'lib/lightbox/css/lightbox.min.css'%}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style-dark-grey.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: DevFolio
+    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body id="page-top">
+
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">Taylor Havart</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#work">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Skew Star /-->
+  <div id="home" class="intro route bg-image" style="background-image: url({% static 'img/minimal_workspace.jpg' %})">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <h1 class="intro-title mb-4">Taylor Havart</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">Java Developer,Scrum Master,Full Stack Developer,Embedded Systems Integration, Aquatic Supervisor, Triathlete</span><strong class="text-slider"></strong></p>
+          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Intro Skew End /-->
+
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="{% static 'img/testimonial-1.jpg'%}" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Taylor Havart</span></p>
+                      <p><span class="title-s">Profile: </span> <span>Software Developer</span></p>
+                      <p><span class="title-s">Email: </span> <span>TH.Labrecque5@gmail.com</span></p>
+                      <p><span class="title-s">Phone: </span> <span>(613)600-4093</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Skill</p>
+                  <span>JAVA</span> <span class="pull-right">90%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>C#</span> <span class="pull-right">80%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="80" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>PYTHON</span> <span class="pull-right">30%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="30" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>JavaFX</span> <span class="pull-right">60%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      About me
+                    </h5>
+                  </div>
+                  <p class="lead">
+                    Full Stack Developer with experience in Java and supporting technologies
+                    including Maven, WiX Toolset, Jackson, JAXB and more. Past projects have included work for NATO/Canadian
+                    Army with Rheinmetall Defence, C/C++ embedded system work for CMC Electronics on the C130T Aircraft CDU and
+                    next generation software flight management system for consumer aircrafts.
+                  </p>
+                  <p class="lead">
+                    Outside of my professional career I strive to be as invested in my hobbies as I am in my job. I spend the majority
+                    of weekends skiing, training for the next triathlon, or completing crossfit workouts. In my down time, I've been
+                    completing this personal project here at TaylorHavart.dev.
+                  </p>
+                  <p class="lead">
+                    This website is a personal project of mine and an outlet for my creative side. Future plans include Kubernetes/Docker
+                    integration, and continuation of the existing Django/Python Framework that this website has been created on. Feel free
+                    to ask any questions on the progress or throw out a suggestion below. If you wish to keep up to date on the project,
+                    take a look at my github  <u><a href = "https://github.com/THavart/WebApplication">here.</a></u>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--/ Section Services Star /-->
+  <section id="service" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Services
+            </h3>
+            <p class="subtitle-a">
+              Independent contracting options below, let's talk about how we can
+              get you that website you or your company always wanted.
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-monitor"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Web Design</h2>
+              <p class="s-description text-center">
+                Looking for your next template to create a website that is attractive and easy to use?
+                Maybe you've found an option but don't know how to integrate it? We offer many flexible
+                options and technologies that can help get your product or ideas out to the world.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-code-working"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Web Development</h2>
+              <p class="s-description text-center">
+                Have that great website but you're missing the functionality? Need a database that can
+                handle a larger customer base than you were expecting, or maybe need something scalable?
+                Let's talk about how we can find a solution for you!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-camera"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Photography</h2>
+              <p class="s-description text-center">
+                Whether it's a portrait for your new LinkedIn profile, rolling shots
+                of your lowered '96 Accord, or a family photo we have you covered with
+                professional equipment and 5+ years of editing experience to make that memory
+                last a lifetime.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-ios-analytics"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Full Stack Development</h2>
+              <p class="s-description text-center">
+                Does your organization need a fresh set of eyes on a new development project? Let's find
+                out if I could be a good part of your next project or current team!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">First Aid Training</h2>
+              <p class="s-description text-center">
+                Does your organization need to be first aid trained? Are you looking
+                for a licensed first aid instructor to come to you and help get everyone
+                up to speed? I offer flexible hours and options. Please feel free to contact
+                me for more information!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-ios-cog"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Further Development</h2>
+              <p class="s-description text-center">
+                As a professional still in the early stages of my career, I'm always
+                looking for new experiences and challenges to keep things interesting
+                Does this sound like something you can offer? Send me a message below!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Services End /-->
+
+  <div class="section-counter paralax-mf bg-image" style="background-image: url({% static 'img/counters-bg.jpg' %})">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">15</p>
+              <span class="counter-text">WORKS COMPLETED</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">2</p>
+              <span class="counter-text">YEARS OF EXPERIENCE</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-people"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">5</p>
+              <span class="counter-text">TOTAL CLIENTS</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">30</p>
+              <span class="counter-text">QUALIFCATIONS HELD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--/ Section Portfolio Star /-->
+  <section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Portfolio
+            </h3>
+            <p class="subtitle-a">
+              <a href = "https://github.com/THavart">Past Projects - Github Link</a>
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="{% static 'img/Compiler.jpg'%}" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="{% static 'img/Compiler.jpg'%}" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title"><a href="https://github.com/THavart/Computer-Engineering-Technology/tree/master/C/Platypus%20Compiler">Platypus Compiler</a></h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">C Development</span> / <span class="w-date">18 Apr. 2016</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="{% static 'img/CHEO.jpg'%}" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="{% static 'img/CHEO.jpg'%}" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title"><a href="https://github.com/THavart/Computer-Engineering-Technology/tree/master/CHEO"> CHEO Research Project</a></h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="{% static 'img/SmartNetwork.jpg'%}" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="{% static 'img/SmartNetwork.jpg'%}" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title"><a href="https://github.com/THavart/Computer-Engineering-Technology/tree/master/Smart%20Network">Smart Network</a></h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Portfolio End /-->
+
+  <!--/ Section Testimonials Star /-->
+  <div class="testimonials paralax-mf bg-image" style="background-image: url({% static 'img/overlay-bg.jpg' %})">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="testimonial-mf" class="owl-carousel owl-theme">
+            <div class="testimonial-box">
+              <div class="author-test">
+                <img src="{% static 'img/Martin_Fowler.jpg'%}" alt="" class="rounded-circle b-shadow-a">
+                <span class="author">Martin Fowler</span>
+              </div>
+              <div class="content-test">
+                <p class="description lead">
+                  “Any fool can write code that a computer can understand.
+                  Good programmers write code that humans can understand.”
+                </p>
+                <span class="comit"><i class="fa fa-quote-right"></i></span>
+              </div>
+            </div>
+            <div class="testimonial-box">
+              <div class="author-test">
+                <img src="{% static 'img/Stephen_McCranie.jpg'%}" alt="" class="rounded-circle b-shadow-a">
+                <span class="author">Stephen McCranie</span>
+              </div>
+              <div class="content-test">
+                <p class="description lead">
+                    "The master has failed more times than the beginner has even tried."
+                </p>
+                <span class="comit"><i class="fa fa-quote-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--/ Section Blog Star /-->
+  <section id="blog" class="blog-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Blog
+            </h3>
+            <p class="subtitle-a">
+              Travel | Technology | Triathlon
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="https://www.infoworld.com/article/3173266/4-reasons-you-should-use-kubernetes.html"><img src="{% static 'img/post-3.jpg'%}" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Web Design</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://www.infoworld.com/article/3173266/4-reasons-you-should-use-kubernetes.html">4 Reasons you should use Kubernetes</a></h3>
+              <p class="card-description">
+                Kubernetes allows you to deploy cloud-native applications anywhere and manage them exactly as you like everywhere.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="{% static 'img/infoworld.jpg'%}" alt="" class="avatar rounded-circle">
+                  <span class="author">Sirish Raghuram, InfoWorld</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="https://developer-tech.com/news/2020/jun/01/github-java-developers-malware-infecting-netbeans-projects/"><img src="{% static 'img/post-2.jpg'%}" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Java Security</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://developer-tech.com/news/2020/jun/01/github-java-developers-malware-infecting-netbeans-projects/">See more ideas about Travel</a></h3>
+              <p class="card-description">
+                GitHub has issued a warning to Java developers about malware which is specifically infecting NetBeans projects.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="{% static 'img/testimonial-2.jpg'%}" alt="" class="avatar rounded-circle">
+                  <span class="author">Ryan Daws</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="https://www.adirondackdailyenterprise.com/news/local-news/2020/06/new-date-for-lp-ironman/"><img src="{% static 'img/post-1.jpg'%}" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Ironman</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://www.adirondackdailyenterprise.com/news/local-news/2020/06/new-date-for-lp-ironman/">Ironman Lake Placid</a></h3>
+              <p class="card-description">
+                The new tentative race date will be fully confirmed once local and New York state officials announce their continued plans for reopening.
+                Following the confirmation of the new race date, we will be reaching out to registered athletes to provide further updates.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Blog End /-->
+
+  <!--/ Section Contact-Footer Star /-->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url({% static 'img/overlay-bg.jpg' %})">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Send a Message
+                    </h5>
+                  </div>
+                  <div>
+                        {% crispy form form.helper %}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">
+                      Get in Touch
+                    </h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">
+                      Want to know more? Please feel free to contact me with the form
+                      on the left, I'd love to hear from you!
+                    </p>
+                    <ul class="list-ico">
+                      <li><span class="ion-ios-location"></span> OTTAWA, ON</li>
+                      <li><span class="ion-ios-telephone"></span> (613)600-4093</li>
+                      <li><span class="ion-email"></span> TH.Labrecque5@gmail.com</li>
+                    </ul>
+                  </div>
+                  <div class="socials">
+                    <ul>
+                      <li><a href="https://github.com/THavart/"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                      <li><a href="https://www.instagram.com/thavart/"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                      <li><a href="https://twitter.com/TaylorHavart"><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
+                      <li><a href="https://www.linkedin.com/in/taylor-havart-062863a4/"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Contact-footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js'%}"></script>
+  <script src="{% static 'lib/popper/popper.min.js'%}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js'%}"></script>
+  <script src="{% static 'lib/easing/easing.min.js'%}"></script>
+  <script src="{% static 'lib/counterup/jquery.waypoints.min.js'%}"></script>
+  <script src="{% static 'lib/counterup/jquery.counterup.js'%}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+  <script src="{% static 'lib/lightbox/js/lightbox.min.js'%}"></script>
+  <script src="{% static 'lib/typed/typed.min.js'%}"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'contactform/contactform.js'%}"></script>
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/main.js'%}"></script>
+
+</body>
+</html>
